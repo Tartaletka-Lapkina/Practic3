@@ -1,0 +1,10 @@
+import numpy as np
+
+# Генерируем массив вещественных чисел
+arr = np.random.uniform(-10, 10, 100)
+
+# Находим все минимальные положительные элементы
+min_positives = [num for num in arr if num > 0 and num == min([n for n in arr if n > 0])]
+
+print("Массив вещественных чисел:", arr)
+print("Минимальные положительные элементы:", min_positives)
